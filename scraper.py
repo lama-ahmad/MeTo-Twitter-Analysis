@@ -4,10 +4,10 @@ import config
 import pandas as pd
 
 auth = tweepy.OAuthHandler(config.consumer_key, config.consumer_secret)
-auth.set_access_token(config.access_token, config.access_token_secret)
+auth.set_access_token(config.access_token, config.access_secret)
 api = tweepy.API(auth,wait_on_rate_limit=True)
 # Open/Create a file to append data
-csvFile = open('metoo.csv', 'a')
+csvFile = open('metoo_2.csv', 'a')
 #Use csv Writer
 csvWriter = csv.writer(csvFile)
 
